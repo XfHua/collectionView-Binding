@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App353.MainPage">
+
+    <StackLayout Margin="20">
+
+        <Label Text="number of familay numbers"/>
+        <Entry x:Name="numberEntry" Placeholder="enter the number"/>
+
+        <Button Text="add" Clicked="Button_Clicked"/>
+
+        <CollectionView x:Name="testCollectionView" ItemsSource="{Binding familyMember}">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+
+                        <Label Text= "name"/>
+                        <Entry Placeholder="enter the number"/>
+
+                        <Label Text= "phone"/>
+                        <Entry Placeholder="enter the phone"/>
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </StackLayout>
+
+   
+
+</ContentPage>
